@@ -3,13 +3,24 @@ package org.example;
 public class Point {
     private int x;
     private int y;
+
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
+
+    // getter methodları
+    public int getX(){ return x; }
+    public int getY(){ return y; }
+
+    // setter metodları
+    public void setX(int x){ this.x = x; }
+    public void setY(int y){ this.y = y; }
+
+    // function overloading... (3)
     public double distance(){
 
-        return Math.sqrt( y * y +  x * x );
+        return Math.sqrt( Math.pow(x , 2) +  Math.pow(y , 2) );
     }
 
     public double distance(Point p){
